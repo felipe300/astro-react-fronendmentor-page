@@ -1,3 +1,5 @@
+import NavMenu from "./NavMenu"
+
 const Header = () => {
   return (
     <header className=''>
@@ -6,7 +8,7 @@ const Header = () => {
           <img src='images/logo.svg' alt='Logo' />
         </div>
         <div className='flex-grow flex items-center z-20'>
-          Navmenu
+          <NavMenu />
         </div>
         <div className='flex items-center'>
           <a href='#'>
