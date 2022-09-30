@@ -1,6 +1,12 @@
 import { Menu } from '@headlessui/react'
+import type { ReactNode } from 'react'
 
-const NevMenuItem = (data: { imgSource: string, imgAlt: string, title: string }) => {
+interface Props {
+  children?: ReactNode
+  title: string
+}
+
+const NevMenuItem = ({ children, ...props }: Props) => {
 
   return <Menu.Item>
     {({ active }) => (
@@ -8,8 +14,8 @@ const NevMenuItem = (data: { imgSource: string, imgAlt: string, title: string })
         className={`${active && 'bg-gray-100 text-gray-900'} block w-full text-left px-4 py-2 text-sm cursor-pointer`}
         href="/"
       >
-        <img src={`images/${data.imgSource}`} alt={data.imgAlt} className='inline w-4 mr-3' />
-        {data.title}
+        {children}
+        {props.title}
       </a>
     )}
   </Menu.Item>

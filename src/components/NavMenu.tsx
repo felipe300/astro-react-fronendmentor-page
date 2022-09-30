@@ -1,54 +1,40 @@
-// headless ui
-import { Menu, Transition } from '@headlessui/react'
+import SimpleMenu from './SimpleMenu'
 import NavMenuItem from './NavMenuItem'
 import NavMenuItems from './NavMenuItems'
+import NavImages from './NavImages'
 
 const NavMenu = () => {
   return <nav>
     <ul className='hidden lg:flex lg:space-x-7 lg:ml-14'>
       <li>
-        <Menu>
-          <Menu.Button className="hover:text-almost-black">
-            Features
-            < img className='inline-block ml-1' src='images/icon-arrow-down.svg' alt='Icon down arrow' />
-          </Menu.Button>
-          <Transition
-            enter="transition duration-100 ease-out"
-            enterFrom="transform scale-95 opacity-0"
-            enterTo="transform scale-100 opacity-100"
-            leave="transition duration-75 ease-out"
-            leaveFrom="transform scale-100 opacity-100"
-            leaveTo="transform scale-95 opacity-0"
-          >
-            <NavMenuItems className="absolute right-0 mt-4 w-40 py-3 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none">
-              <NavMenuItem imgSource='icon-todo.svg' imgAlt='Todo Logo' title='Todo' />
-              <NavMenuItem imgSource='icon-calendar.svg' imgAlt='Calendar Logo' title='Calendar' />
-              <NavMenuItem imgSource='icon-reminders.svg' imgAlt='Reminders Logo' title='Reminders' />
-              <NavMenuItem imgSource='icon-planning.svg' imgAlt='Planning Logo' title='Planning' />
-            </NavMenuItems>
-          </Transition>
-        </Menu>
+        <SimpleMenu title='Features' isDropDown={true}>
+          <NavMenuItems className="absolute right-0 mt-4 w-40 py-3 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none">
+            <NavMenuItem title='Calendar'>
+              <NavImages imgSource='icon-calendar.svg' imgAlt='Calendar Logo' className='inline w-4 mr-3' />
+            </NavMenuItem>
+            <NavMenuItem title='Reminders'>
+              <NavImages imgSource='icon-reminders.svg' imgAlt='Reminders Logo' className='inline w-4 mr-3' />
+            </NavMenuItem>
+            <NavMenuItem title='Planning'>
+              <NavImages imgSource='icon-planning.svg' imgAlt='Planning Logo' className='inline w-4 mr-3' />
+            </NavMenuItem>
+          </NavMenuItems>
+        </SimpleMenu>
       </li>
       <li>
-        <Menu>
-          <Menu.Button className="hover:text-almost-black">
-            Features 2
-            < img className='inline-block ml-1' src='images/icon-arrow-down.svg' alt='Icon down arrow' />
-          </Menu.Button>
-          <Transition
-            enter="transition duration-100 ease-out"
-            enterFrom="transform scale-95 opacity-0"
-            enterTo="transform scale-100 opacity-100"
-            leave="transition duration-75 ease-out"
-            leaveFrom="transform scale-100 opacity-100"
-            leaveTo="transform scale-95 opacity-0"
-          >
-            <NavMenuItems className="absolute right-0 mt-4 w-40 py-3 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none">
-              <NavMenuItem imgSource='icon-todo.svg' imgAlt='Todo Logo' title='Todo' />
-              <NavMenuItem imgSource='icon-calendar.svg' imgAlt='Calendar Logo' title='Calendar' />
-            </NavMenuItems>
-          </Transition>
-        </Menu>
+        <SimpleMenu title='Company' isDropDown={true}>
+          <NavMenuItems className="absolute right-0 mt-4 w-40 py-3 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none">
+            <NavMenuItem title='History' />
+            <NavMenuItem title='Our Team' />
+            <NavMenuItem title='Blog' />
+          </NavMenuItems>
+        </SimpleMenu>
+      </li>
+      <li>
+        <SimpleMenu title='Carrers' isDropDown={false} />
+      </li>
+      <li>
+        <SimpleMenu title='About' isDropDown={false} />
       </li>
     </ul>
   </nav>
