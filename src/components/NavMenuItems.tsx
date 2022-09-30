@@ -1,6 +1,5 @@
 import { Menu } from '@headlessui/react'
 import type { ReactNode } from 'react'
-import NavMenuItem from './NavMenuItem'
 
 
 interface Props {

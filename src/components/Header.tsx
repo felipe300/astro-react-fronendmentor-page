@@ -2,7 +2,7 @@ import NavMenu from "./NavMenu"
 
 const Header = () => {
   return (
-    <header className=''>
+    <header>
       <div className='flex py-5 px-3'>
         <div className='flex items-center pt-3'>
           <img src='images/logo.svg' alt='Logo' />
