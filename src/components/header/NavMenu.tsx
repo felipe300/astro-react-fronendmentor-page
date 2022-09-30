@@ -1,7 +1,7 @@
-import SimpleMenu from './SimpleMenu'
-import NavMenuItem from './NavMenuItem'
-import NavMenuItems from './NavMenuItems'
-import NavImages from './NavImages'
+import NavImages from "./NavImages"
+import NavMenuItems from "./NavMenuItems"
+import NavMenuItem from "./NavMenuItem"
+import SimpleMenu from "./SimpleMenu"
 
 const NavMenu = () => {
   return <nav>

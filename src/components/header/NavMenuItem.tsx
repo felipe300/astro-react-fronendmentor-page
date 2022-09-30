@@ -12,7 +12,7 @@ const NevMenuItem = ({ children, ...props }: Props) => {
     {({ active }) => (
       <a
         className={`${active && 'bg-gray-100 text-gray-900'} block w-full text-left px-4 py-2 text-sm cursor-pointer`}
-        href="/"
+        href="#"
       >
         {children}
         {props.title}
