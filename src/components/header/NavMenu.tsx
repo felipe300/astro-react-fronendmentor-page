@@ -1,4 +1,4 @@
-import NavImages from "./NavImages"
+import NavImages from "../CustomImages"
 import NavMenuItems from "./NavMenuItems"
 import NavMenuItem from "./NavMenuItem"
 import SimpleMenu from "./SimpleMenu"

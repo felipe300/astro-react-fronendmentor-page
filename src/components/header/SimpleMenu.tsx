@@ -1,6 +1,6 @@
 import { Menu, Transition } from '@headlessui/react'
 import type { ReactNode } from 'react'
-import NavImages from './NavImages'
+import NavImages from '../CustomImages'
 
 interface Props {
   children?: ReactNode

@@ -1,6 +1,5 @@
 import NavMenu from "./NavMenu"
 
-
 const Header = () => {
   return (
     <header>
