@@ -13,7 +13,6 @@ const SimpleMenu = ({ children, ...props }: Props) => {
     <Menu>
       <Menu.Button className="hover:text-almost-black">
         {props.title}
-        {/* < img className='inline-block ml-1' src='images/icon-arrow-down.svg' alt='Icon down arrow' /> */}
         {
           props.isDropDown && <NavImages imgSource='icon-arrow-down.svg' imgAlt='Icon down arrow' className='inline-block ml-1' />
         }
